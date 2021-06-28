@@ -9,7 +9,7 @@ if (isset($page) && $page == 1){
         $title = $list[1]->title;
     } else if (isset($page) && $page == 3) {
         $title = $list[2]->title;
-    } else {
+    } else if (isset($page) && $page == 4) {
         $title = $list[3]->title;
     }
 ?>
@@ -57,7 +57,7 @@ if (isset($page) && $page == 1){
      echo $list[1]->content . '<br><br>';
  } else if (isset($page) && $page == 3) {
      echo $list[2]->content . '<br><br>';
- } else {
+ } else if (isset($page) && $page == 4) {
      echo $list[3]->content . '<br><br>';
  }
 // for ($i = 0; $i < count($list); $i++) {
