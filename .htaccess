@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+RewriteBase /
+RewriteEngine On
+RewriteRule ^/accueil.html$   index.php?page=1 [L]
