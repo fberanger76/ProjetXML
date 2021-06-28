@@ -1,6 +1,10 @@
 <?php 
 $xml = simplexml_load_file("assets/xml/source.xml");
 $list = $xml->page;
+$homePage = $xml->page[0];
+$whoAreWe = $xml->page[1];
+$testimonies = $xml->page[2];
+$contact = $xml->page[3];
 ?>
 
 <!DOCTYPE html>
@@ -23,16 +27,16 @@ $list = $xml->page;
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#1">Accueil</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#2">Qui sommes-nous ?</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Qui sommes-nous ?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#3">Témoignages</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Témoignages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#4">Contact et devis</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Contact et devis</a>
         </li>
       </ul>
     </div>
@@ -52,6 +56,7 @@ for ($i = 0; $i < count($list); $i++) {
 
 }
 
+var_dump($contact);
 
 ?>
 </div>
