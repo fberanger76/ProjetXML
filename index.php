@@ -1,10 +1,7 @@
 <?php 
 $xml = simplexml_load_file("assets/xml/source.xml");
 $list = $xml->page;
-$homePage = $xml->page[0];
-$whoAreWe = $xml->page[1];
-$testimonies = $xml->page[2];
-$contact = $xml->page[3];
+$page = $_GET["page"];
 ?>
 
 <!DOCTYPE html>
@@ -20,23 +17,23 @@ $contact = $xml->page[3];
 <div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Maçonnerie Ocordo</a>
+    <div class="fw-bold">Maçonnerie Ocordo</div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+          <a class="nav-link active" aria-current="page" href="index.php?page=1">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Qui sommes-nous ?</a>
+          <a class="nav-link active" aria-current="page" href="index.php?page=2">Qui sommes-nous ?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Témoignages</a>
+          <a class="nav-link active" aria-current="page" href="index.php?page=3">Témoignages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Contact et devis</a>
+          <a class="nav-link active" aria-current="page" href="index.php?page=4">Contact et devis</a>
         </li>
       </ul>
     </div>
@@ -44,19 +41,26 @@ $contact = $xml->page[3];
 </nav>
 
 <?php 
-for ($i = 0; $i < count($list); $i++) {
-
-    echo '<b>Numéro de page:</b> ' . $list[$i]->attributes()->id . '<br>';
-
-    echo 'Menu: ' . $list[$i]->menu . '<br>';
-
-    echo 'Titre: ' . $list[$i]->title . '<br><br>';
-
-    echo 'Contenu: ' . $list[$i]->content . '<br><br>';
-
+if (isset($page) && $page == 1){
+echo $list[0]->content . '<br><br>';
+} else if (isset($page) && $page == 2) {
+    echo $list[1]->content . '<br><br>';
+} else if (isset($page) && $page == 3) {
+    echo $list[2]->content . '<br><br>';
+} else {
+    echo $list[3]->content . '<br><br>';
 }
+// for ($i = 0; $i < count($list); $i++) {
 
-var_dump($contact);
+//     echo '<b>Numéro de page:</b> ' . $list[$i]->attributes()->id . '<br>';
+
+//     echo 'Menu: ' . $list[$i]->menu . '<br>';
+
+//     echo 'Titre: ' . $list[$i]->title . '<br><br>';
+
+//     echo 'Contenu: ' . $list[$i]->content . '<br><br>';
+
+// }
 
 ?>
 </div>
