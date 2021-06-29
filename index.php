@@ -34,16 +34,16 @@ if (isset($page) && $page == 1){
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php?page=1">Accueil</a>
+          <a class="nav-link active" aria-current="page" href="accueil.html">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php?page=2">Qui sommes-nous ?</a>
+          <a class="nav-link active" aria-current="page" href="quisommesnous.html">Qui sommes-nous ?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php?page=3">Témoignages</a>
+          <a class="nav-link active" aria-current="page" href="temoignages.html">Témoignages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php?page=4">Contact et devis</a>
+          <a class="nav-link active" aria-current="page" href="contact.html">Contact et devis</a>
         </li>
       </ul>
     </div>
