@@ -1,4 +1,7 @@
 Options +FollowSymlinks
-RewriteBase /
 RewriteEngine On
-RewriteRule ^/accueil.html$   index.php?page=1 [L]
+RewriteBase /
+RewriteRule ^PHP/ProjetXML/accueil.html$   PHP/ProjetXML/index.php?page=1 [L]
+RewriteRule ^PHP/ProjetXML/quisommesnous.html$   PHP/ProjetXML/index.php?page=2 [L]
+RewriteRule ^PHP/ProjetXML/temoignages.html$   PHP/ProjetXML/index.php?page=3 [L]
+RewriteRule ^PHP/ProjetXML/contact.html$   PHP/ProjetXML/index.php?page=4 [L]
